@@ -15,7 +15,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const { data } = await axios.post(
+      await axios.post(
         `${server}/users/login`,
         {
           email,
@@ -29,7 +29,7 @@ const Login = () => {
         }
       );
 
-      toast.success(data.message);
+      toast.success("Login Successful");
       setIsAuthenticated(true);
       setLoading(false);
     } catch (error) {
