@@ -33,7 +33,8 @@ const Login = () => {
       setIsAuthenticated(true);
       setLoading(false);
     } catch (error) {
-      toast.error(error.response.data.message);
+      //   toast.error(error.response.data.message);
+      toast.error("unsuccessful");
       setLoading(false);
       setIsAuthenticated(false);
     }
